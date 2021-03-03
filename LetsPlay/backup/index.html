@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Guess the number</title>
+        <style type="text/css">
+            body {
+                background-color: darkred;
+                background-image: url('images/jigsawback.jpg');
+                background-repeat: no-repeat;
+            }
+
+            header{
+                margin-left: 40%;
+                background-color: transparent;
+                color: red;
+                width: 25%;
+                height: 10%;
+                border: 6px double rgb(150, 6, 6);  
+                text-align: center;
+                border-radius: 1em;
+            }
+
+            main {
+                margin-left: 35%;
+                margin-top: 2%;
+                background-color: transparent;
+                color: red;
+                width: 35%;
+                height: 600px;
+                border: 6px double rgb(150, 6, 6);
+                border-radius: 5em;
+            }
+            main p {
+                text-align: center;
+                font-size: 25px;
+            }
+
+            footer {
+                margin-left: 40%;
+                margin-top: 2%;
+                background-color: transparent;
+                width: 25%;
+                height: 100px;
+                border: 6px double rgb(150, 6, 6);  
+                border-radius: 1em;
+            }
+
+            .game {
+                margin-left: 20%;
+                margin-top: 3%;
+                background-color: rgb(150, 6, 6);  
+                width: 60%;
+                height: 50%;
+                border: 1px solid rgb(197, 137, 6);
+            }
+
+            .game2 {
+                margin-left: 20%;
+                margin-top: 10%;
+                background-color: rgb(150, 6, 6);  
+                width: 60%;
+                height: 10%;
+                border: 1px solid rgb(197, 137, 6);        
+            }
+             /* The Modal (background) */
+            .modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                padding-top: 100px;
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgba(100, 90, 90, 0.4);
+            }
+
+            /* Modal Content/Box */
+            .modalcontent {
+                background-color: #746f6f;
+                margin: auto; /* 15% from the top and centered */
+                padding: 20px;
+                border: 1px solid rgb(230, 7, 7);
+                width: 80%; /* Could be more or less, depending on screen size */
+                border-radius: 2em;
+            }
+            .modalcontent > p {
+                text-align: center;
+                color: #ff1e00;
+                font-size: 2em;
+            }
+            form > .pseudo {
+                margin-left: 51em;
+                border-radius: 1em;
+                border: 1px solid rgb(175, 21, 21);
+            }
+            form > .envoyer {
+                margin-left: 51.5em;
+                margin-top: 0.5em;
+                border-radius: 1em;
+                background-color: rgb(172, 165, 165);
+                color: rgb(8, 8, 8);
+                border: 1px solid rgb(175, 21, 21);
+            }
+            .envoyer:hover {
+                color: rgb(211, 0, 0);
+                background-color: rgb(7, 7, 7);
+
+            }
+            /* The Close Button */
+            .close {
+                color: rgb(209, 0, 0);
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+            a {
+                text-decoration: none;
+                color: #ff1e00;
+            }
+
+            a:visited {
+                color: #ff1e00;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: rgb(48, 47, 47);
+                text-decoration: none;
+                cursor: pointer;
+            } 
+        </style>
+    </head>
+    <body>
+        <header>
+                <h1><u><span class="wannaplay" id="wannaplay">Wanna Play a game ?</span></u></h1>        
+        </header>  
+        <main id="master">
+            <p id="86">J'ai séléctionné un nombre entre 1 et 100, pour toi <br></p>
+            <div class="game">
+
+            </div>
+            <div class="game2">
+
+            </div>
+            
+        </main>  
+        <footer id="flooter">
+            
+        </footer>        
+        <div class="modal" id="myModal">
+            <div class="modalcontent">
+                <span class="close" id="close">&times;</span>
+                <p><u>Qui vient souffrir ?</u></p>
+                <form action="">
+                    <input class="pseudo" id="pseudo" type="text" name="pseudo"  placeholder="pseudo">
+                    <input class="envoyer" id="envoyer" type="submit" value="Let's play together">
+                </form>
+            </div>
+        </div>
+        <script>
+            /* choisir le pseudo*/ 
+
+           /*let myButton = document.querySelector('button');
+            let myHeading = document.getElementById('85');
+            let myParagraph = document.getElementById('86')
+        
+
+            function setUserName() {
+                let myName = prompt('Qui vient souffrir ?');
+                if(!myName) {
+                    setUserName();
+                    localStorage.setItem('name', myName);}
+                else {
+                     myHeading.innerHTML = 'Wanna play a game ' + myName + ' ?'
+                     myParagraph.innerHTML = "J'ai séléctionné un nombre entre 1 et 100, rien que pour toi " + myName + "."}
+                
+            }
+
+            if(!localStorage.getItem('name')) {
+                setUserName();
+            } else {
+                let storedName = localStorage.getItem('name');
+                myHeading.innerHTML = 'Wanna play a game ' + storedName + ' ?';
+                myParagraph.innerHTML = "J'ai séléctionné un nombre entre 1 et 100,  rien que pour toi " + myName + ".";
+                localStorage.clear();
+            }
+            myButton.onclick = function() {
+                setUserName();
+            }*/
+
+
+            
+            /* ERREUR DE SCRIPT
+            var modal = document.getElementById("mMyodal");
+            var span = document.getElementById("close")[0];
+  
+            window.onload = function() {
+            modal.style.display ="block";
+            }
+
+            span.onclick = function() {
+            modal.style.display = "none";
+            }
+
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                }            
+            }*/
+            var modal = document.getElementById("myModal");
+            var sclose = document.getElementsByClassName("close")[0];
+            var send = document.getElementById("envoyer");
+            var master = document.getElementById("master");
+            var wannaplay = document.getElementById("wannaplay");
+            var flooter = document.getElementById("flooter");
+
+            wannaplay.onclick = function() {
+                modal.style.display = "block";
+            }
+
+            sclose.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            window.onload = function(event) {
+                if (event.target == document) {
+                    master.style.display = "none";
+                    flooter.style.display = "none";
+                }
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+            send.onclick = function setUserName() {
+                let myName = document.getElementById("pseudo");
+                if(!myName){
+                    setUserName();
+                    localStorage.setItem('name', myName);
+                } else {
+                    myParagraph.innerHTML = "J'ai séléctionné un nombre entre 1 et 100, rien que pour toi " + myName + ".";
+                }
+            }
+            
+            if(!localStorage.getItem('name')) {
+                setUserName();
+            } else {
+                let storedName = localStorage.getItem('name');
+                myHeading.innerHTML = 'Wanna play a game ' + storedName + ' ?';
+                myParagraph.innerHTML = "J'ai séléctionné un nombre entre 1 et 100,  rien que pour toi " + myName + ".";
+                localStorage.clear();
+            }
+            
+            /*choisir un nombre entre 1 et 100*/
+        </script>
+    </body>
+</html>

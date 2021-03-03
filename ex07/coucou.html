@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Formulaire</title>
+    <style type="text/css">
+          body {
+        background-color: darkred;
+    }
+    .container {
+        margin-left: 40%;
+        background-color: grey;
+        width: 25%;
+        height: 1600px;
+        border: 6px double rgb(61, 61, 61);
+    }
+              
+    }
+    .container2 {
+            width: 800px;
+            height: 600px;
+
+        }
+    .fuck {
+            margin-left: 15%;
+    }
+    p{
+        margin-left: 3%;
+    }
+    iframe{
+        margin-left: 18%;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">           
+            <div class="container2" id="a999">
+                <h3 style="color: darkred; margin-left: 12%; margin-top: 3%; font-size: 50px;"><u>CHEH</u></h3><br><br>
+                <h4 style="color: darkred; margin-left: 3%; margin-top: 2%; font-size: 25px;"><u>Bouhou ça marche pas snif Snif.</u></h4><br><br>
+                <p style="margin-left: 2%;">Il est beau ce doigt hein ? Aller... je sais que tu veux cliquer :3</p>
+            </div>
+            <div class="container2" id="a666" style="display: none">
+                <h3 style="color: darkred; margin-left: 12%; margin-top: 3%; font-size: 50px;"><u>DANS TON CUL</u></h3><br><br>
+                <h4 style="color: darkred; margin-left: 3%; margin-top: 2%; font-size: 25px;"><u>t'en voulait encore ?</u></h4><br><br>
+                <p> ça ne t'as pas suffit hein ? Vas y recommence... ;)</p>
+                
+            </div>
+            <div class="container2" id="a69" style="display: none">
+                <h3 style="color: darkred; margin-left: 12%; margin-top: 3%; font-size: 50px;"><u>SURPRISE</u></h3><br><br>
+                <h4 style="color: darkred; margin-left: 3%; margin-top: 2%; font-size: 25px;"><u>Tu t'y attendais ?</u></h4><br><br>
+                <p> Si tu te demandes si ça m'amuse... ben ... oui :D</p>
+                
+            </div>
+        <img src="images/fuckyou.png" class="fuck" alt="wesh">
+                <iframe
+                    width="" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/PhiSgXz_l20" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+    </div>
+    <script>     
+        let myImage = document.querySelector('div.container > img');
+
+        myImage.onclick = function() {
+            let mySrc = myImage.getAttribute('src');
+            if(mySrc === 'images/fuckyou.png') {
+                myImage.setAttribute('src','images/fuck2.png');
+                a999.style.display = 'none';
+                a666.style.display ='block';
+                a69.style.display = 'none';
+                
+            } else if  (mySrc === 'images/fuck2.png') {
+                myImage.setAttribute('src','images/johnny.jpg');
+                a999.style.display = 'none';
+                a666.style.display = 'none';
+                a69.style.display = 'block';
+            } else {
+                myImage.setAttribute('src','images/fuckyou.png');
+                a999.style.display = 'block';
+                a666.style.display = 'none';
+                a69.style.display = 'none';
+            }
+        }   
+    </script> 
+    
+</body>
+</html>

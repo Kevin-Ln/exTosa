@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Formulaire</title>
+    <style type="text/css">
+
+    body {
+        background-color: darkred;
+    }
+    .Contact {
+        margin-left: 40%;
+        background-color: grey;
+        width: 25%;
+        border: 6px double rgb(61, 61, 61);
+    }
+
+    form {        
+        width: 100%;
+        height: 500px;
+    }
+    form input {
+        margin-left: 50px;
+        border: 3px double rgb(146, 0,0)
+    }
+    form textarea{
+        margin-left: 50px;
+        width: 60%;
+        height: 150px;
+        border: 3px double rgb(146, 0,0)
+    }
+    .send {
+        margin-left: 25%;
+        margin-top: 4%;
+    }
+    .send input {
+        border: 2px solid rgb(146, 0, 0);
+        color: rgb(230, 189, 9);
+        background-color: rgb(87, 84, 84);
+        width: 100px;
+        height: 50px;
+
+    }
+    h1 {
+        text-align: center;
+    }
+    p{
+        margin-left: 2%;
+    }
+    </style>
+</head>
+<body>
+    <div class="Contact">
+        <h1><u>Contact</u></h1>
+            <form  action="page_annexe/coucou.html" method="GET" name="Formulaire">  <!--   -->
+                <p><u><b>Nom:</b></u></p><input type="text" name="nom" id="nom">
+                <p><u><b>Prénom:</b></u></p><input type="text" name="prenom"  id="prenom">
+                <p><u><b>E-mail:</b></u></p><input name="e-mail"  id="email">
+                <p><u><b>Message:</b></u></p><textarea name="msg" rows="9" cols="1"></textarea>
+               <div class="send">
+                   <input type="submit" value="Envoyer">
+                </div>
+            </form>
+    </div>
+</body>

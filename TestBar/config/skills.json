@@ -1,0 +1,28 @@
+{
+  "progress": [
+    {
+      "_comment1": "HTML",
+      "value": 85
+    },
+    {
+      "_comment2": "CSS",
+      "value": 55
+    },
+    {
+      "_comment3": "JAVASCRIPT",
+      "value": 30
+    },
+    {
+      "_comment4": "PHP",
+      "value": 80
+    },
+    {
+      "_comment5": "JQUERY",
+      "value": 30
+    },
+    {
+      "_comment6": "BOOTSTRAP",
+      "value": 80
+    }
+  ]
+}

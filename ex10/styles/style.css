@@ -1,0 +1,24 @@
+html {
+    font-family: sans-serif;
+  }
+p {
+      vertical-align: middle ;
+      text-align: center;
+      width: 200px;
+      height: 25px;
+      padding: 30px;
+      border: 1px solid rgb(177, 0, 0) ;
+      border-radius: 0.9em;
+      background-color: rgba(184, 4, 4, 1);
+      color: rgb(182, 4, 4);
+      background-image: linear-gradient(to top left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 30%, rgba(184, 4, 4, 1) 70%);
+      text-shadow: 1px 1px 2px rgba(0, 0, 0);
+      box-shadow: 3px 3px 1px 1px rgba(255, 0, 0, 0.541),
+                inset 2px 2px 2px 1px rgba(255, 253, 253, 0.76),
+                inset -3px -3px 2px 1px rgba(0, 0, 0, 0.582);
+
+      font-size: 1.125rem;
+      /* j'ai utilisé un convertisseur de px en rem pour obtenir ceci à partire de 18px */
+}
+  
+  /* Your CSS below here */

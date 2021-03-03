@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Guess the number</title>
+        <style type="text/css">
+            body {
+                background-color: darkred;
+                background-image: url('images/jigsawback.jpg');
+                background-repeat: no-repeat;
+            }
+
+            .header{
+                margin-left: 40%;
+                margin-top: 20em;
+                background-color: transparent;
+                color: red;
+                width: 25em;
+                height: 5em;
+                border: 6px double rgb(150, 6, 6);  
+                text-align: center;
+                border-radius: 1em;
+            }
+
+            .game {
+                margin-left: 20%;
+                margin-top: 3%;
+                background-color: rgb(150, 6, 6);  
+                width: 60%;
+                height: 50%;
+                border: 1px solid rgb(197, 137, 6);
+            }
+
+            .game2 {
+                margin-left: 20%;
+                margin-top: 10%;
+                background-color: rgb(150, 6, 6);  
+                width: 60%;
+                height: 10%;
+                border: 1px solid rgb(197, 137, 6);        
+            }
+             /* The Modal (background) */
+            .modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                padding-top: 100px;
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgba(100, 90, 90, 0.4);
+            }
+
+            /* Modal Content/Box */
+            .modalcontent {
+                background-color: #746f6f;
+                margin: auto; /* 15% from the top and centered */
+                padding: 20px;
+                border: 1px solid rgb(230, 7, 7);
+                width: 80%; /* Could be more or less, depending on screen size */
+                border-radius: 2em;
+            }
+            .modalcontent > p {
+                text-align: center;
+                color: #ff1e00;
+                font-size: 2em;
+            }
+            form > .pseudo {
+                margin-left: 51em;
+                border-radius: 1em;
+                border: 1px solid rgb(175, 21, 21);
+            }
+            form > .envoyer {
+                margin-left: 51.5em;
+                margin-top: 0.5em;
+                border-radius: 1em;
+                background-color: rgb(172, 165, 165);
+                color: rgb(8, 8, 8);
+                border: 1px solid rgb(175, 21, 21);
+            }
+            .envoyer:hover {
+                color: rgb(211, 0, 0);
+                background-color: rgb(7, 7, 7);
+
+            }
+            /* The Close Button */
+            .close {
+                color: rgb(209, 0, 0);
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+            a {
+                text-decoration: none;
+                color: #ff1e00;
+            }
+
+            a:visited {
+                color: #ff1e00;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: rgb(48, 47, 47);
+                text-decoration: none;
+                cursor: pointer;
+            } 
+        </style>
+    </head>
+    <body>
+        <div class="header">
+                <h1><u><span class="wannaplay" id="wannaplay">Wanna Play a game ?</span></u></h1>        
+        </div>      
+        <div class="modal" id="myModal">
+            <div class="modalcontent">
+                <span class="close" id="close">&times;</span>
+                <p><u>Qui vient souffrir ?</u></p>
+                <form action="annexes/annexe.html">
+                    <input class="pseudo" id="pseudo" type="text" name="pseudo"  placeholder="pseudo">
+                    <input class="envoyer" id="envoyer" type="submit" value="Let's play together">
+                </form>
+            </div>
+        </div>
+        <script>
+            /* modal custom*/
+            var modal = document.getElementById("myModal");
+            var sclose = document.getElementsByClassName("close")[0];
+            var send = document.getElementById("envoyer");
+            var wannaplay = document.getElementById("wannaplay");
+            var vpseudo = document.getElementById("pseudo");
+
+            wannaplay.onclick = function() {
+                modal.style.display = "block";
+            }
+
+            sclose.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            /* enregistrement du pseudo dans le local stroage*/
+            if(!localStorage.getItem('pseudo')) {
+                populateStorage();
+            } else {
+                setStyles();
+            }
+
+            function populateStorage() {
+                localStorage.setItem('pseudo', document.getElementById('pseudo').value);
+
+                setStyles();
+            }
+
+            function setStyles() {
+                var currentPseudo = localStorage.getItem('pseudo');
+                document.getElementById('pseudo').value = currentPseudo;
+            }
+
+            vpseudo.onchange = populateStorage;
+        </script>
+    </body>
+</html>

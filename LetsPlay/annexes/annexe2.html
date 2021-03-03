@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+    <style>
+        body {
+                background-color: rgb(78, 74, 74);
+                
+                background-repeat: no-repeat;
+            }
+
+            header{
+                margin-left: 40%;
+                background-color: transparent;
+                color: rgb(124, 124, 103);
+                width: 25%;
+                height: 10%;
+                border: 6px double rgb(179, 201, 248);  
+                text-align: center;
+                border-radius: 1em;
+            }
+
+            main {
+                margin-left: 35%;
+                margin-top: 2%;
+                background-color: transparent;
+                color: rgb(124, 124, 103);
+                width: 35%;
+                height: 600px;
+                border: 6px double rgb(179, 201, 248);
+                border-radius: 5em;
+            }
+            main p {
+                text-align: center;
+                font-size: 25px;
+            }
+
+            footer {
+                margin-left: 40%;
+                margin-top: 2%;
+                background-color: transparent;
+                width: 25%;
+                height: 100px;
+                border: 6px double rgb(179, 201, 248);  
+                border-radius: 1em;
+            }
+
+            .game {
+                margin-left: 15%;
+                margin-top: 3%;
+                background-color: rgb(150, 6, 6);  
+                width: 70%;
+                height: 70%;
+                border: 1px solid rgb(197, 137, 6);
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="85"><u>Oh tu es bien joueur, </u></h1>        
+    </header> 
+    <main id="master">
+        <p id="86">Partant pour un second jeu ? <br></p>
+        <div class="game" id="game">
+            <p class="guesses"></p>
+            <p class="lastResult"></p>
+            <p class="lowOrHi"></p>
+        </div>
+        
+    </main> 
+    
+<script>
+    let myHeading = document.getElementById('85');
+    let myParagraph = document.getElementById('86');
+
+
+    var vpseudo = localStorage.getItem('pseudo');
+            myHeading.innerHTML = 'Oh tu es bien joueur, ' + vpseudo + ' !'
+            myParagraph.innerHTML = "Partant pour un second jeu  " + vpseudo + " ?";
+            localStorage.clear();
+
+            
+
+</script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>RatGnaRock</title>
+    <style>
+        .rat1 {
+            float: right;
+            margin-top: -120px;
+            margin-right: 150px;
+        }
+        .text1{
+            margin-left: 1%;
+        }
+        .text{
+            margin-left: 3%;
+        }
+        
+        ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        }
+
+        li {
+        float: left;
+        }
+
+        li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 50px 106px;
+        text-decoration: none;
+        margin-bottom: 0px;
+        }
+        li a:hover {
+        background-color: #111;
+        }
+        .bandeau {
+            background-color: rgb(173, 6, 6);
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            color: rgb(15, 13, 13);
+            background-color: rgb(139, 137, 137);
+            border: 5px double rgb(48, 46, 46);
+            height: auto;
+            width: 1700px;
+            margin: auto;
+            margin-bottom: 5%;
+            padding: 2px;
+            padding-bottom: 200px;
+        }
+        .deco {
+            position: absolute;
+            margin-top: -150px;
+            background-color:rgb(182, 187, 192);
+            height: 100px;
+            width: 100%;
+        }
+        .cheese {
+            margin-left: 350px;
+            margin-top: 32px;
+        }
+        .eclair {
+            margin-left: 250px;
+            margin-top: 8px;
+        }
+        .mjolnir {
+            margin-left: 250px;
+            margin-top: 32px;
+        }
+        .rat2 {
+            margin-left: 250px;
+            margin-top: 32px;
+        }
+        .logo {
+            float:left;
+        }
+        .formulaire {
+            margin-top: 50px;
+            margin-left: 1500px;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(182, 187, 192); margin: 0; height: auto">
+    <img src="Image/logoratgnarock4.png" class="logo">
+    <header class="bandeau">
+        <div > 
+            <h1 style="margin-top: 0px; color: rgb(5, 0, 0); text-align: center; font-size: 70px;"><u>RatGnaRock</h1></u>
+            <img class="rat1" src="image/rat140x140.png" alt=RaGnaRock>
+            <h2 style="text-align: right; color: rgb(51, 19, 19); margin-right: 450px; font-size: 20px;"> Un Rat, un marteau, une aventure</h2><br><br>    
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li> <a href="index.html">Accueil</a></li>
+            <li> <a href="Histoire.html">Histoire</a></li>
+            <li> <a href="Personnage.html">Personnages</a></li>
+            <li> <a href="Univers.html">Univers</a></li>
+            <li> <a href="Mention.html">Mentions</a></li>
+            
+        <form class="formulaire" action="fun.html" method="GET">
+            <input type="search" name="dtc" placeholder="Rechercher">
+            <input type="submit" value="Lancer !">
+        </form>
+        </ul>
+        
+    </nav>
+    <br><br><br><br>
+    <br><br><br><br>
+    <main>
+        <div class="deco">
+            <img src="Image/cheese.png" class="cheese" alt="cheese">
+            <img src="Image/eclair.png" class="eclair" alt="eclair">
+            <img src="Image/mjolnir2.png" class="mjolnir" alt="mjolnir">
+            <img src="Image/rat2.png" class="rat2" alt="rat2">
+        </div>
+        <div class="container">
+            <h3 style="color: darkred; margin-left: 12%; margin-top: 3%; font-size: 50px;"><u>Liste des personnages</u></h3><br><br>
+            <h4 style="color: darkred; margin-left: 3%; margin-top: 2%; font-size: 25px;"><u>Personnages principaux:</u></h4><br>
+            <dl>
+                <dt class="text">RatGnaRock</dt>
+                <dd>Héro de destiné. Il s'agit là d'un rat, tout ce qu'il y'a de plus banal, qui par pur hasard se trouve sur le lieu du crash de Mjolnir le marteau légendaire de Thor, et qui réussi à le soulever.</dd><br>
+                <dt class="text">Mjolnir</dt>
+                <dd>Il s'agit là ni plus ni moins que du marteau de Thor. Ce dernier ayant fui le dieu du tonnerre devenu indigne de manier le pouvoir du marteau, il se reffuchia sur Terre, et fis la rencontre d'un rat et decida de guider celui ci pour devenir un héro</dd><br>
+                <dt class="text">Loki</dt>
+                <dd>Fils adoptif d'Odin père de toute chose, il conspire sans cesse pour obtenir le trône d'asgard à la place de son frère Thor</dd>
+            </dl>
+            <h5 style="color: darkred; margin-left: 3%; margin-top: 2%; font-size: 25px;"><u>Personnages secondaire: </u></h5>
+            <dl>
+                <dt class="text">Thor</dt>
+                <dd>Le légendaire dieu du tonnerre de la mythologie nordique. Récemment corrompus par son frère Loki, il lança le ragnarock la fin de tout.</dd>
+        </div>   
+    </main>
+    <script src="scripts/third.js">        
+    </script>
+</body>
+</html>

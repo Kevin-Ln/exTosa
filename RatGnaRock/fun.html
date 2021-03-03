@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>RatGnaRock</title>
+    <style>
+        .rat1 {
+            float: right;
+            margin-top: -120px;
+            margin-right: 150px;
+        }
+        .text1{
+            margin-left: 1%;
+        }
+        
+        ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        }
+
+        li {
+        float: left;
+        }
+
+        li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 50px 106px;
+        text-decoration: none;
+        margin-bottom: 0px;
+        }
+        li a:hover {
+        background-color: #111;
+        }
+        .bandeau {
+            background-color: rgb(173, 6, 6);
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            color: rgb(15, 13, 13);
+            background-color: rgb(139, 137, 137);
+            border: 5px double rgb(48, 46, 46);
+            height: auto;
+            width: 1700px;
+            margin: auto;
+            margin-bottom: 5%;
+            padding: 2px;
+            padding-bottom: 200px;
+        }
+        .deco {
+            position: absolute;
+            margin-top: -150px;
+            background-color:rgb(182, 187, 192);
+            height: 100px;
+            width: 100%;
+        }
+        .cheese {
+            margin-left: 350px;
+            margin-top: 32px;
+        }
+        .eclair {
+            margin-left: 250px;
+            margin-top: 8px;
+        }
+        .mjolnir {
+            margin-left: 250px;
+            margin-top: 32px;
+        }
+        .rat2 {
+            margin-left: 250px;
+            margin-top: 32px;
+        }
+        .logo {
+            float:left;
+        }
+        .formulaire {
+            margin-top: 50px;
+            margin-left: 1500px;
+        }
+        .fuck {
+            float:right;
+            margin-top: 50px;
+            margin-right: 250px;
+        }
+        .container2 {
+            width: 800px;
+            height: 600px;
+
+        }
+    </style>
+</head>
+<body style="background-color: rgb(182, 187, 192); margin: 0;">
+    <img src="image/logoratgnarock4.png" class="logo">
+    <header class="bandeau">
+        <div > 
+            <h1 style="margin-top: 0px; color: rgb(5, 0, 0); text-align: center; font-size: 70px;"><u>RatGnaRock</u></h1>
+            <img class="rat1" src="image/rat140x140.png" alt=RaGnaRock>
+            <h2 style="text-align: right; color: rgb(51, 19, 19); margin-right: 450px; font-size: 20px;"> Un Rat, un marteau, une aventure</h2><br><br>    
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li> <a href="index.html">Accueil</a></li>
+            <li> <a href="Histoire.html">Histoire</a></li>
+            <li> <a href="Personnage.html">Personnages</a></li>
+            <li> <a href="Univers.html">Univers</a></li>
+            <li> <a href="Mention.html">Mentions</a></li>
+            
+        <form class="formulaire" action="fun.html" method="GET">
+            <input type="search" name="dtc" placeholder="Rechercher">
+            <input type="submit" value="Lancer !">
+        </form>
+        </ul>
+        
+    </nav>
+    <br><br><br><br>
+    <br><br><br><br>
+    <main>
+        <div class="deco">
+            <img src="image/cheese.png" class="cheese" alt="cheese">
+            <img src="image/eclair.png" class="eclair" alt="eclair">
+            <img src="image/mjolnir2.png" class="mjolnir" alt="mjolnir">
+            <img src="image/rat2.png" class="rat2" alt="rat2">
+        </div>
+        <div class="container" id="a6969">            
+            <img src="image/fuckyou.png" class="fuck">
+            <div class="container2" id="a999">
+                <h3 style="color: darkred; margin-left: 12%; margin-top: 3%; font-size: 50px;"><u>CHEH</u></h3><br><br>
+                <h4 style="color: darkred; margin-left: 3%; margin-top: 2%; font-size: 25px;"><u>Bouhou ça marche pas snif Snif.</u></h4><br><br>
+                <p style="margin-left: 2%;">Il est beau ce doigt hein ?</p>
+            </div>
+            <div class="container2" id="a666" style="display: none">
+                <h3 style="color: darkred; margin-left: 12%; margin-top: 3%; font-size: 50px;"><u>DANS TON CUL</u></h3><br><br>
+                <h4 style="color: darkred; margin-left: 3%; margin-top: 2%; font-size: 25px;"><u>t'en voulait encore ?</u></h4><br><br>
+            </div>
+        </div>   
+    </main>
+    
+    <script>     
+        let myImage = document.querySelector('div.container > img');
+        let a999 = document.getElementById('a999');
+        let a666 = document.getElementById('a666');
+
+            
+
+        myImage.onclick = function() {
+            let mySrc = myImage.getAttribute('src');
+            if(mySrc === 'image/fuckyou.png') {
+                myImage.setAttribute('src','image/fuck2.png');
+                a999.style.display = 'none';
+                a666.style.display ='block';
+                
+            } else {
+                myImage.setAttribute('src','image/fuckyou.png');
+                a999.style.display = 'block';
+                a666.style.display = 'none';
+            }
+        }
+   
+    </script>
+</body>
+</html>
